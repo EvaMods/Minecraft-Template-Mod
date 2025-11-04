@@ -24,16 +24,12 @@
       "eva.template.TemplateClient"
     ],
     "modmenu": [
-      "template.config.TemplateConfigScreen"
+      "eva.template.config.TemplateConfigScreen"
     ]
   },
   "mixins": [
     {
       "config": "template.mixins.json"
-    },
-    {
-      "config": "template.client.mixins.json",
-      "environment": "client"
     }
   ],
   "depends": {

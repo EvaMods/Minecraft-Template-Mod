@@ -37,11 +37,9 @@ repositories {
 }
 
 loom {
-    splitEnvironmentSourceSets()
     mods {
         "{$archives_base_name}" {
             sourceSet sourceSets.main
-            sourceSet sourceSets.client
         }
     }
     accessWidenerPath = file("src/main/resources/template.accesswidener")
@@ -118,6 +116,20 @@ def getParchmentWithDecrementedMC(minecraftVersion) {
 
 def (fabric_loader_version, fabric_api_version) = getLatestFabric(releaseVersion)
 def (decrementedVersion, pMinecraftVersion, mostRecentParchmentDate) = getParchmentWithDecrementedMC(releaseVersion)
+
+ext.mod = { String localOverrideKey, Object dep ->
+    File file = file("../.${localOverrideKey}-local")
+    if (file.exists()) {
+        dependencies.implementation(dep)
+    } else {
+        dependencies.modImplementation(dep)
+    }
+}
+
+ext.includeMod = { String localOverrideKey, Object dep ->
+    mod(localOverrideKey, dep)
+    dependencies.include(dep)
+}
 
 dependencies {
     implementation 'org.apache.commons:commons-text:1.12.0'
