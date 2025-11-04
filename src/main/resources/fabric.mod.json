@@ -30,10 +30,6 @@
   "mixins": [
     {
       "config": "template.mixins.json"
-    },
-    {
-      "config": "template.client.mixins.json",
-      "environment": "client"
     }
   ],
   "depends": {
