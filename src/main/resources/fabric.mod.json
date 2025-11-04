@@ -24,7 +24,7 @@
       "eva.template.TemplateClient"
     ],
     "modmenu": [
-      "eva.template.config.TemplateConfigScreen"
+      "template.config.TemplateConfigScreen"
     ]
   },
   "mixins": [

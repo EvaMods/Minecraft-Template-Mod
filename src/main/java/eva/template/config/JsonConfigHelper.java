@@ -3,7 +3,6 @@ package eva.template.config;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import eva.template.TemplateClient;
-import eva.template.TemplateMain;
 
 import java.io.*;
 import java.nio.file.Files;
