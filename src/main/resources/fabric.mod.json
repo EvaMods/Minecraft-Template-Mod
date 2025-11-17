@@ -10,7 +10,8 @@
   ],
   "contact": {
     "homepage": "https://modrinth.com/mod/template",
-    "sources": "https://github.com/EvarikaArkana/template"
+    "sources": "https://github.com/EvarikaArkana/template",
+    "issues": "https://github.com/EvarikaArkana/template/issues"
   },
   "license": "${mod_license}",
   "icon": "assets/template/icon.png",
@@ -34,23 +35,25 @@
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
-    "minecraft": ">=${minecraft_version_0} <=${minecraft_version_1}",
+    "minecraft": ">=${minecraft_version_0} <${minecraft_version_1}",
     "java": ">=21",
     "fabric-api": "*"
   },
   "suggests": {
+
+  },
+  "recommends": {
+
   },
   "breaks": {
   },
   "custom": {
     "modmenu": {
-      "links": {
-        "modmenu.issues": "https://github.com/EvarikaArkana/Minecraft-Template-Mod/issues"
-      }
+
     },
     "mc-publish": {
-      "modrinth": "",
-      "curseforge": 0,
+      "modrinth": "${modrinth}",
+      "curseforge": "${curseforge}",
       "dependencies": [
         "template(recommended){modrinth:template}"
       ]
