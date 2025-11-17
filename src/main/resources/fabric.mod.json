@@ -9,9 +9,9 @@
     "Evarika"
   ],
   "contact": {
-    "homepage": "https://modrinth.com/mod/template",
-    "sources": "https://github.com/EvarikaArkana/template",
-    "issues": "https://github.com/EvarikaArkana/template/issues"
+    "homepage": "${homepage}",
+    "sources": "${source}",
+    "issues": "${issues}"
   },
   "license": "${mod_license}",
   "icon": "assets/template/icon.png",
